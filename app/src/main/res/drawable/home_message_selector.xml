@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 按压状态 -->
+    <item android:drawable="@drawable/ic_cart" android:state_checked="true" />
+
+    <!-- 被选中时 -->
+    <item android:drawable="@drawable/ic_cart" android:state_selected="true" />
+    <!-- 被激活时 -->
+    <item android:drawable="@drawable/ic_cart" android:state_activated="true" />
+
+    <!-- 默认状态 -->
+    <item android:drawable="@drawable/ic_un_cart" />
+
+</selector>
