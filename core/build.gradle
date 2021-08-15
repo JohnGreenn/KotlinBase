@@ -45,5 +45,5 @@ dependencies {
     androidTestImplementation des.espressoCore
 
     // 吐司框架：https://github.com/getActivity/ToastUtils
-    api 'com.github.getActivity:ToastUtils:9.5'
+    //api 'com.github.getActivity:ToastUtils:9.5'
 }
