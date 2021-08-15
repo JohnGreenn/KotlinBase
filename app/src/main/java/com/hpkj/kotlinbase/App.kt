@@ -3,8 +3,8 @@ package com.hpkj.kotlinbase
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.Application
+import android.content.Context
 import android.util.Log
-import com.hjq.toast.ToastUtils
 import com.scwang.smart.refresh.footer.ClassicsFooter
 import com.scwang.smart.refresh.header.ClassicsHeader
 import com.scwang.smart.refresh.layout.SmartRefreshLayout
@@ -29,20 +29,19 @@ class App : Application() {
         super.onCreate()
 
         instances = this
+        context = applicationContext
+
         initSdk()
     }
 
     private fun initSdk() {
         CoroutineScope(Dispatchers.IO + SupervisorJob()).launch {
-            initToast()
             initQbSdk()
             initBugLy()
         }
     }
 
-    private fun initToast() {
-        ToastUtils.init(this)
-    }
+
 
     private fun initQbSdk() {
         // x5内核初始化接口
@@ -78,6 +77,10 @@ class App : Application() {
     companion object {
         @SuppressLint("StaticFieldLeak")
         private var instances: App? = null
+
+        //全局context
+        @SuppressLint("StaticFieldLeak")
+        lateinit var context: Context
 
         fun getInstance(): App {
             if (instances == null) {

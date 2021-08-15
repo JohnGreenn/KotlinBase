@@ -5,15 +5,16 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
-import com.hjq.toast.ToastUtils
 import com.hpkj.core.view.base.BaseActivity
 import com.hpkj.kotlinbase.R
 import com.hpkj.kotlinbase.databinding.ActivityMainBinding
 import com.hpkj.kotlinbase.utils.LogUtil
+import com.hpkj.kotlinbase.utils.showToast
 import kotlin.system.exitProcess
 
 class MainActivity :BaseActivity() {
@@ -51,6 +52,10 @@ class MainActivity :BaseActivity() {
         // (2)关联 “底部导航栏”与“navController”, 导航路由见 app/src/main/res/navigation/nav_graph.xml
         binding.bottomNavigationView.setupWithNavController(navController)
 
+        // 不使用图标默认变色
+        binding.bottomNavigationView.itemIconTintList = null
+
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -75,7 +80,7 @@ class MainActivity :BaseActivity() {
 
     private fun exit() {
         if (System.currentTimeMillis() - exitTime > 2000) {
-            ToastUtils.show(getString(R.string.exit_app))
+            R.string.exit_app.showToast(Toast.LENGTH_LONG)
             exitTime = System.currentTimeMillis()
         } else {
             exitProcess(0)
