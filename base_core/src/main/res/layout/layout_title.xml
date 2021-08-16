@@ -40,7 +40,7 @@
         android:layout_gravity="center_vertical|right"
         android:gravity="center"
         android:padding="@dimen/dp_8"
-        android:textColor="@color/text_click_color"
+        android:textColor="@drawable/text_click_color"
         android:textSize="@dimen/sp_16"
         android:visibility="gone"
         tools:ignore="RtlSymmetry" />
