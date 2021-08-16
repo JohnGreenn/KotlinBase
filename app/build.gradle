@@ -48,7 +48,7 @@ dependencies {
     implementation des.appcompat
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation project(path: ':core')
+    implementation project(path: ':base_core')
     //testImplementation 'junit:junit:4.+'
     //androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     //androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

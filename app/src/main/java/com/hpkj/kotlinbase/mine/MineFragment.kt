@@ -23,10 +23,6 @@ class MineFragment : Fragment(){
     }
 
 
-
-
-
-
     companion object {
         @JvmStatic
         fun newInstance() = MineFragment()

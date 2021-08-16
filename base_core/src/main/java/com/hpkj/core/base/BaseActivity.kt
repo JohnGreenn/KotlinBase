@@ -1,4 +1,4 @@
-package com.hpkj.core.view.base
+package com.hpkj.core.base
 
 import android.os.Bundle
 import android.view.View
@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
  * author：Glq
  * time：2021/08/10 17:33
  */
-abstract class BaseActivity : AppCompatActivity(), BaseActivityInit{
+abstract class BaseActivity : AppCompatActivity(), BaseActivityInit {
 
     /**
      * Activity中显示加载等待的控件。

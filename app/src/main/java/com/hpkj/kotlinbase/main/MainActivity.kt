@@ -10,14 +10,14 @@ import androidx.activity.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
-import com.hpkj.core.view.base.BaseActivity
+import com.hpkj.core.base.BaseActivity
 import com.hpkj.kotlinbase.R
 import com.hpkj.kotlinbase.databinding.ActivityMainBinding
 import com.hpkj.kotlinbase.utils.LogUtil
 import com.hpkj.kotlinbase.utils.showToast
 import kotlin.system.exitProcess
 
-class MainActivity :BaseActivity() {
+class MainActivity : BaseActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val viewModel by viewModels<MainViewModel>()

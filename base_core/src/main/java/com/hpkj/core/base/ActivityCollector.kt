@@ -1,4 +1,4 @@
-package com.hpkj.core.view.base
+package com.hpkj.core.base
 
 import android.app.Activity
 import android.util.Log
